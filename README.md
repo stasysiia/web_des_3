@@ -1,2 +1,2 @@
-# SMC_WEBDES3_SPRING21
+# web_des_3
 web design 3 @SMC
