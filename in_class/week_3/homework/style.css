@@ -1,0 +1,117 @@
+.fr {
+  float: right;
+}
+h1,h2{
+  text-align: center;
+  padding-top: 16px;
+  }
+h1{
+  color: rgb(255, 255, 245);
+}
+.featurette-heading, .lead {
+  padding: 16px;
+}
+.navbar-brand {
+  font-size: 1.9em;
+}
+.catcafe{
+  position: relative;
+  background: url(img/coffeecats.jpg) 100% -400px;
+  background-position-x: center;
+  height: 100vh;
+}
+.row{
+  --bs-gutter-x: 0rem;
+  background: #fff;
+}
+.table{
+  margin: 30px 0 110px 0;
+}
+.table-dark {
+  --bs-table-bg: #343a40;
+  --bs-table-striped-bg: #3e444a;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #484e53;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #43494e;
+  --bs-table-hover-color: #fff;
+  color: #fff;
+  border-color: #484e53;
+}
+#monmon, #boosboos {
+  background: url(img/catcup.jpg) repeat-x;
+  padding: 80px 16px 0 16px;
+  max-width: 1470px !important;
+}
+.socials {
+  display: block;
+  margin: 8px !important;
+}
+.socials li {
+  display: inline-block;
+  margin-right: 1.8rem;
+}
+#steams {
+  width: 1470px !important;
+  max-width: 1470px;
+  right: 2%;
+  top: 40%;
+  position: relative;
+}
+.steam {
+  width: 2px;
+  height: 120px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  animation: waft 2.2s linear infinite;
+  filter: blur(6px);
+}
+.steam-1 {
+  right: 0px;
+}
+.steam-2 {
+  right: 40px;
+}
+.steam-3 {
+  right: 80px;
+}
+
+@keyframes waft {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -240px, 0) scale(3);
+    opacity: 0;
+  }
+}
+@media (min-width:1680px) {
+  #steams {
+    max-width: 1670px;
+    right: unset;
+    left: 7%;
+    top: 40%;
+    position: relative;
+  }
+}
+@media (max-width:1679px) {
+  #steams {
+    width: 1470px;
+    max-width: 1470px;
+    right: 2%;
+    top: 40%;
+    position: relative;
+  }
+}
+@media (max-width:1299px) {
+  #steams {
+    display: none;
+  }
+}
+@media (max-width:600px) {
+  .catcafe{
+    background-position-x: 860px !important;
+  }
+}
