@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+  background-color: #ece6f2;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+.marsoon{
+  text-align: left;
+  color: rgba(201,172,229);
+  text-shadow: 7px 7px 1px rgb(151, 149, 219, 0.3);
+}
+h1 {
+  color: #fff;
+  font-size: 3em;
+  font-weight: 600;
+  text-shadow: 7px 7px 1px rgb(151, 149, 219);
+  letter-spacing: .15rem;
+  text-align: center;
+}
+h2 {
+  color: rgb(151, 149, 219);
+  font-weight: 700;
+}
+p {
+  color: slategrey;
+}
+.navbar {
+  background-color: rgba(201,172,229,.8);
+  box-shadow: 0 10px 24px rgb(8, 26, 25 / 16%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+.navbar-brand {
+  font-size: 2.4em;
+  padding-right:20px;
+}
+#navbarSupportedContent {
+  position: absolute;
+  right: 0%;
+}
+.main-header {
+  padding-top:180px;
+}
+.catcafe{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.lol {
+  position: relative;
+  width: auto;
+  height: 70vh;
+  background: url(img/mon-mon.png) center no-repeat;
+  background-position-y: 0px; 
+  background-size: contain;
+}
+.row{
+  --bs-gutter-x: 0rem;
+  background: #fff;
+}
+.boos {
+  background: #fff;
+  padding: 18px;
+}
+.card-text {
+  color: #a35fe8;
+}
+#monmon, #boosboos {
+  padding: 80px 16px 0 16px;
+  max-width: 1470px !important;
+}
+.socials {
+  display: block;
+  margin: 8px !important;
+}
+.socials li {
+  display: inline-block;
+  margin-right: 1.8rem;
+}
+@media (min-width:1680px) {
+}
+@media (max-width:1679px) {
+}
+@media (max-width:1299px) {
+}
+@media (max-width:600px) {
+  #monmon, #boosboos {
+    background-position-x: -30px;
+  }
+}
