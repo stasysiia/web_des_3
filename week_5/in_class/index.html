@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Forms and a bit of JS</title>
+  </head>
+  <body>
+    <header></header>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Checkout!</h2>
+                <form action="" method="POST">
+                    <fieldset>
+                    <div class="mb-3">
+                        <label for="userName">Your name</label>
+                        <input type="text" name="userName" class="form-control" id="userName" placeholder="Boosboos">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="userEmail">Your email address</label>
+                        <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="boosboos@emal.com">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="userPass">Your password</label>
+                        <input type="password" name="userPass" class="form-control" id="userPass">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="userLocation">Your location</label>
+                        <select class="form-select" name="userLocation" id="userLocation">
+                            <option value="la">Los Angeles</option>
+                            <option value="sd" selected>San Diego</option>
+                            <option value="sf">San Francisco</option>
+                            <option value="sc">Sacramento</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check form-switch mb-3">
+                        <input type="checkbox" name="termsAgree" id="termsAgree" class="form-check-input">
+                        <label for="termsAgree" class="form-check-label">Agree to terms of service.</label>
+                    </div>
+
+                    </fieldset>
+                    <h3>Shipping:</h3>
+                    <fieldset>
+                        <div class="mb-3">
+                            <label for="shippingName">Recepient's name</label>
+                            <input type="text" name="shippingName" id="shippingName" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingAddress">Recepient's address</label>
+                            <input type="text" name="shippingAddress" id="shippingAddress" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingCity">Recepient's city</label>
+                            <input type="text" name="shippingCity" id="shippingCity" class="form-control">
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-warning">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <script>
+        let uNinput = document.getElementById("userName");
+        let shNinput = document.getElementById("shippingName");
+
+        uNinput.addEventListener("blur", function(){
+            if(this.value != ""){
+                shNinput.value = this.value;
+            }
+            else {
+                alert("Please fill in your name!");
+            }
+            
+        })
+
+    </script>
+
+  </body>
+</html>
