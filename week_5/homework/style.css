@@ -1,0 +1,11 @@
+body {width:100%}
+#boosboosboos {max-width:880px;width:95%;margin:35px auto}
+fieldset {margin-top:20px}
+input.monmon {padding:11px}
+label.monmon {padding:0px 0px 6px 8px}
+.monmon {margin-top: 20px}
+
+/* hiding the billing section if checkbox is checked */
+input[type="checkbox"]:checked ~ fieldset {
+    display: none;
+  }
