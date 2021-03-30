@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Exo', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+/*PREVENT BROWSER SELECTION OUTLINE*/
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+outline: none;
+}
+/*alert*/
+.newsAlert{
+  position: fixed;
+  bottom: 50px; 
+  left:2%;
+  width: 96%;
+  z-index: 9999;
+}
+.alert{
+  display: none;
+}
+.close {
+  float: right;
+  text-decoration: none !important;
+  z-index: 99999;
+}
+
+/*main*/
+.marsoon{
+  text-align: left;
+  color: rgb(24, 24, 24);
+}
+.page-title {
+  padding-top: 55px;
+}
+
+h1 {
+  color:rgb(134, 171, 207);
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: .15rem;
+  text-align: center;
+}
+h2 {
+  color: rgb(37, 44, 54);
+  font-weight: 700;
+  font-size: 2.5em;
+}
+p {
+  color: slategrey;
+}
+img {
+  border-radius: 40px;
+}
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 10px 24px rgb(8, 26, 25 / 16%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+.navbar-brand {
+  font-size: 2.4em;
+  padding-right:20px;
+}
+#navbarSupportedContent {
+  position: absolute;
+  right: 0%;
+}
+.main-header {
+  padding-top:180px;
+}
+
+.row{
+  --bs-gutter-x: 0rem;
+  background: #fff;
+}
+.boos {
+  background: #fff;
+  padding: 18px;
+}
+
+#monmon, #boosboos {
+  padding: 80px 16px 0 16px;
+  max-width: 1470px !important;
+}
+
+/*home page*/
+.lol {
+  position: relative;
+  top: 100px;
+  width: auto;
+  height: 70vh;
+  background: url(img/mon-mon.png) center no-repeat;
+  background-position-y: 0px; 
+  background-size: contain;
+}
+
+/*product/work page*/
+#monCarousel, #monpro {min-height:800px;height:100%;width:100%;} 
+.carousel-item {min-height:800px;max-height:100vh;max-width:100vw;}
+.carousel-inner .carousel-item:nth-child(1) {background: #fff;}
+.carousel-inner .carousel-item:nth-child(2) {background: #fff;}
+.carousel-inner .carousel-item:nth-child(3) {background: #fff;}
+.carousel-inner .carousel-item:nth-child(1) img {width: 540px;position: absolute;left:8%;top:240px}
+.carousel-inner .carousel-item:nth-child(2) img {width: 800px;position: absolute;left:26%;top:100px}
+.carousel-inner .carousel-item:nth-child(3) img {width: 600px;position: absolute;left:52%;top:120px}
+.carousel-inner .carousel-item:nth-child(1) .carousel-caption {width: 540px;position: absolute;left:8%;top:240px}
+.carousel-inner .carousel-item:nth-child(2) .carousel-caption {width: 800px;position: absolute;left:26%;top:100px}
+.carousel-inner .carousel-item:nth-child(3) .carousel-caption {width: 600px;position: absolute;left:52%;top:120px} 
+.carousel-control {width:60px;height:60px;background:transparent;top:400px;border:none}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  filter: invert(1);
+}
+.carousel-indicators .carousel-control {background:black;border-radius:50%;margin:12px;opacity:.4;}
+
+/*team page*/
+.card {
+  margin:10%;
+  padding-top: 55px;
+  border:none;
+  border-radius:40px;
+  box-shadow:40px 40px 40px #cccccc,
+  0 0 0 #ffffff,
+  0 0 0 #cccccc inset,
+  2px 2px 2px #ffffff inset;
+}
+.card-img, .card-img-bottom, .card-img-top {
+  width: 50%;
+}
+.card-text {
+  color: rgb(24, 24, 24);
+}
+.card-img-wrap {display: inline-flex;}
+.card-img-wrap h2 {margin-top:30px}
+
+.socials {
+  fill: #000;
+  display: block;
+  margin: 8px !important;
+}
+
+.socials li {
+  display: inline-block;
+  margin-right: 1.8rem;
+}
+@media (min-width:1680px) {
+}
+@media (max-width:1679px) {
+}
+@media (max-width:1299px) {
+}
+@media (max-width:600px) {
+  #monmon, #boosboos {
+    background-position-x: -30px;
+  }
+}
