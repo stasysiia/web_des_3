@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stasysiia</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div id="monobama">
+            <svg>
+                <filter id="blur">
+                    <feGaussianBlur stdDeviation="2" />
+                </filter>
+            </svg>
+        </div>
+        <div id="top-nav" class="glass-effect">
+            <div id="site-title">
+                <a href="index.html">
+                    <h1 id="logo">Stasysiia</h1>
+                </a>
+            </div>
+            <!--mobile nav hamb-->
+            <input type="checkbox" id="hamburger" />
+            <nav id="main-nav" class="menu">
+                <ul id="kitty-drop" class="sliding-underline">
+                    <li>
+                        <h3><a href="#">Works</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="#">Store</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="#">About</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="#">Blog</a></h3>
+                    </li>
+                    <li>
+                        <a href="#" class="button">Donate</a>
+                    </li>
+                </ul>
+            </nav>
+            <label class="menuicon" for="hamburger">
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <!--gallery grid-->
+
+    <section id="show">
+        <div class="gallery">
+          <picture class="art">
+            <source srcset="img/stasysiia1.jpg" type="image/jpg">
+            <img src="img/stasysiia1.jpg" alt="yoko art"/>
+          </picture>
+          <picture class="art">
+            <source srcset="img/stasysiia2.jpg" type="image/jpg">
+            <img src="img/stasysiia2.jpg" alt="yoko art"/>
+          </picture>
+          <picture class="art">
+            <source srcset="img/stasysiia3.jpg" type="image/jpg">
+            <img src="img/stasysiia3.jpg" alt="yoko art"/>
+          </picture>
+          <picture class="art">
+            <source srcset="img/stasysiia4.jpg" type="image/jpg">
+            <img src="img/stasysiia4.jpg" alt="yoko art"/>
+          </picture>
+        </div>
+        <div class="loading">
+          <div class="loading-animation">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+</body>
+
+<!-- JS -->
+<script src="./script.js"></script>
+</html>
