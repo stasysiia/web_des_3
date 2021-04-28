@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+ body {
+     background-color: #fff;
+     color: #000;
+     font-family: 'Exo', sans-serif;
+     font-size: 22px;
+     margin: 0;
+     padding: 0;
+     background-color: #fff;
+     color: #111111;
+     justify-content: center;
+     align-items: center;
+}
+ button {
+     background: #e7f2ff;
+     color: #111111;
+     font-size: 1.2em;
+     margin: 16px;
+     padding: 6px 29px;
+     box-shadow: 2px 2px 3px #c8c8c8, -2px -2px 5px white;
+     transition: box-shadow 0.2s;
+     border: 0;
+     border-radius: 2em;
+     outline: 0;
+     cursor: pointer;
+}
+ button:hover {
+     box-shadow: 8px 8px 10px #c8c8c8, -8px -8px 10px white;
+}
+ button:active {
+     box-shadow: 2px 2px 2px #c8c8c8, -2px -2px 2px white;
+}
+ .modal-backdrop {
+    background:rgba(155, 206, 255,.4);
+}
+ .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 0rem 1rem;
+}
+ .modal-title {
+    font-size:1.3em;
+}
+ .modal-content {
+     background-color: #e7f2ff;
+     border-radius: 2em;
+     border: none !important;
+     padding:2px 10px;
+}
+ .modal-footer button {
+     background-color: #e7f2ff;
+}
+ .fade:not(.modal-backdrop) {
+     transform: scale(0);
+     opacity: 0;
+     -webkit-transition: all .25s linear;
+     -o-transition: all .25s linear;
+     transition: all .25s linear;
+}
+ .fade.show:not(.modal-backdrop) {
+     opacity: 1;
+     transform: scale(1);
+}
+ form {
+     margin-bottom: 1.3em;
+}
+ form div {
+     margin-bottom: 1em;
+}
+ form div:not(.form-check) input {
+     border: 0;
+     margin:0px 4px 20px 4px !important;
+     padding: .7em;
+     border-radius: 2em;
+     background-color: white;
+     color: #343333;
+     box-shadow: 4px 4px 4px #c8c8c8 inset, -4px -4px 4px white inset;
+     outline: 0;
+     font-size: .9em;
+     transition: box-shadow 0.2s;
+}
+ form div:not(.form-check) input::placeholder {
+     color: #343333;
+}
+ form div:not(.form-check) input:focus {
+     box-shadow: 2px 2px 2px #c8c8c8 inset, -2px -2px 2px white inset;
+}
+ .form-check {
+     display: block;
+     min-height: 1rem;
+     max-height: 1rem;
+     padding-left: 1.5em;
+     margin-bottom: .125rem;
+}
+.form-check-label {
+     font-size: .8em;
+     color: #777 !important;
+}
+ ::placeholder { 
+     color: rgb(134, 171, 207) !important;
+     opacity: .9 !important; 
+}
+ form button {
+     width: 100%;
+     border-radius: 2em;
+     margin-top: 1em;
+     padding: 1em 2em;
+}
+ .social {
+     display: flex;
+     justify-content: space-between;
+}
+ .social button {
+     height: 75px;
+     width: 75px;
+     border-radius: 1em;
+     font-size: 1.5em;
+}
+/*PREVENT BROWSER SELECTION OUTLINE*/
+ a:focus, button:focus, input:focus, textarea:focus {
+     outline: none;
+}
+ .newsbutton {
+     margin: 6px 10px;
+}
+/*alert*/
+ .newsAlert{
+     position: fixed;
+     bottom: 50px;
+     left:2%;
+     width: 96%;
+     z-index: 9999;
+}
+ .alert{
+     display: none;
+}
+ .close {
+     display: none;
+     float: right;
+     text-decoration: none !important;
+     z-index: 99999;
+}
+/*main*/
+ .marsoon{
+     text-align: left;
+     color: rgb(24, 24, 24);
+}
+ .page-title {
+     padding-top: 55px;
+}
+ h1 {
+     color:rgb(134, 171, 207);
+     font-size: 3em;
+     font-weight: 600;
+     letter-spacing: .15rem;
+     text-align: center;
+}
+ h2 {
+     color: rgb(37, 44, 54);
+     font-weight: 700;
+     font-size: 2.5em;
+}
+ h5{
+     padding: 15px 0;
+     font-weight: bold;
+     color: rgb(134, 171, 207);
+}
+ p {
+     color: slategrey;
+     font-family: "Roboto", sans-serif;
+     margin: .6em;
+}
+ img {
+     border-radius: 40px;
+}
+ .row, .container {
+     background: transparent !important;
+}
+ .nav-link.active {
+    text-decoration: underline
+}
+ .navbar {
+     background-color: #fff;
+     box-shadow: 0 10px 24px rgb(8, 26, 25 / 16%);
+     -webkit-backdrop-filter: blur(7px);
+     backdrop-filter: blur(7px);
+}
+ .navbar-brand {
+     font-size: 2.4em;
+     padding-right:20px;
+}
+ .nav-link {
+     margin-right: 10px;
+}
+ #navbarSupportedContent {
+     position: absolute;
+     right: 0%;
+}
+ .main-header {
+     padding-top:180px;
+}
+ .source {
+    font-size: .8em;
+}
+ .row{
+     --bs-gutter-x: 0rem;
+     background: #fff;
+}
+ .boos {
+     background: #fff;
+     padding: 18px;
+}
+ #monmon, #boosboos {
+     padding: 80px 16px 0 16px;
+     max-width: 1470px !important;
+}
+ .socials {
+     fill: #353535;
+     display: block;
+     margin: 8px;
+}
+ .socials li {
+     display: inline-block;
+     margin-right: 1.8rem;
+}
+ @media (min-width:601px) and (max-width:1100px) {
+     .card-title {
+         font-size: 1.7em;
+    }
+}
+ @media (max-width:991px) {
+     .navbar-brand {
+         font-size: 1.8rem;
+         padding-right: 0px;
+    }
+     .socials li {
+         margin-right: 0rem;
+    }
+     .socials {
+         margin: 8px 8px 8px 0px;
+    }
+     #navbarSupportedContent {
+         right: 71px;
+    }
+}
+ @media (max-width:600px) {
+     .card-title {
+         font-size: 1.8em;
+    }
+     .card:not(.card-body) {
+         margin: 3%;
+         box-shadow:10px 10px 10px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset, 2px 2px 2px #ffffff inset;
+    }
+     .card-img, .card-img-top {
+         padding:5px !important;
+         border-radius: 20px !important;
+    }
+}
+ @media (max-width:400px) {
+     .card-title {
+         font-size: 1.4em;
+    }
+     .navbar-brand {
+         font-size: 1em;
+    }
+}

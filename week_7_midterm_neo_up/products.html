@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Future Cat Inc</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /*product page*/
+      .modal-dialog {
+      top: 20%;
+      }
+      #product-title {position:relative;top:80px;z-index:4;}
+      #product-subtitle {text-align:center;position:relative;top:20px;font-size:1.6em;color:#777;z-index:4;}
+      .limb-title {font-size: 1.3em;padding:5px 0 !important;}
+      #monCarousel {position:relative;top:-110px;width:100%}
+      .carousel-caption {color:#000;}
+      .carousel-item {max-height:800px;height:100vh;max-width:100vw;}
+      .carousel-control {width:60px;height:60px;background:transparent;top:400px;border:none}
+      .carousel-control-next-icon, .carousel-control-prev-icon {filter: invert(1);}
+      .carousel-indicators .carousel-control {background:black;border-radius:50%;margin:12px;opacity:.4;}
+      @media (min-width:992px) {
+      .carousel-inner .carousel-item:nth-child(1) img {width: 33%;position: absolute;left:8%;top:210px}
+      .carousel-inner .carousel-item:nth-child(2) img {width: 33%;position: absolute;left:56%;top:180px}
+      .carousel-inner .carousel-item:nth-child(3) img {width: 33%;position: absolute;left:8%;top:190px}
+      .carousel-inner .carousel-item:nth-child(4) img {width: 33%;position: absolute;left:56%;top:190px}
+      .carousel-inner .carousel-item:nth-child(1) .carousel-caption {width: 40%;position: absolute;left:48%;top:180px}
+      .carousel-inner .carousel-item:nth-child(2) .carousel-caption {width: 40%;position: absolute;left:10%;top:150px}
+      .carousel-inner .carousel-item:nth-child(3) .carousel-caption {width: 40%;position: absolute;left:46%;top:160px} 
+      .carousel-inner .carousel-item:nth-child(4) .carousel-caption {width: 40%;position: absolute;left:10%;top:160px}
+			}
+      @media (max-width:991px) {
+      .carousel-inner .carousel-item img {width: 75%;margin:0 auto;position:unset;left:unset;top:unset}
+      .carousel-inner .carousel-item .carousel-caption {width: 100%;position:unset;left:unset;top:unset}
+      #monCarousel {margin-top:180px;}
+      .carousel-control {top: 50px;}
+			}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Future Cat Inc</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="about.html">ABOUT</a>
+            <a class="nav-link active" href="products.html">LIMBS</a>
+            <a class="nav-link" href="team.html">TEAM</a>
+            <button type="button" class="newsbutton" data-bs-toggle="modal" data-bs-target="#myModal">Newsletter</button>
+          </div>
+        </div>
+      </div>
+      <div id="navbarSupportedContent">
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24" style=" fill:#000;">
+                <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24" style=" fill:#000;">
+                <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="newsAlert alert alert-success">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Success!</strong> Now you will get updates from Robo-Kitty!
+    </div>
+    <section id="monpro">
+      <h1 id="product-title" class="page-title">Our Limbs</h1>
+      <h2 id="product-subtitle" class="page-title">We Have 4 Products</h2>
+      <div id="monCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#monCarousel" data-bs-slide-to="0" class="carousel-control active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#monCarousel" data-bs-slide-to="1" class="carousel-control" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#monCarousel" data-bs-slide-to="2" class="carousel-control" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#monCarousel" data-bs-slide-to="3" class="carousel-control" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/pooh-walks.jpg" class="d-block" alt="bionic legs">
+            <div class="carousel-caption d-md-block">
+              <h5 class="limb-title">Bionic Legs</h5>
+              <p>These bionic prosthesis implants are helping cats recover from severe injuries. A wide variety of materials are used to create the limb, including acrylic resin, carbon fiber, thermoplastics, silicone, aluminum, and titanium. To create life-like appearance, a foam cover can be applied to match the real limb.</p>
+              <p class="source"><em>Source: </em><a href="https://doctorzlatinov.com/EN/" target="_blank">Dr Vladislav Zlatinov: Veterinary surgery specialist</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/titanium-paws.jpg" class="d-block" alt="titanium legs">
+            <div class="carousel-caption d-md-block">
+              <h5 class="limb-title">3D Printed Legs</h5>
+              <p>Extruded titanium-alloy legs that are embedded directly into the cat's bones. The bones grow around the metal and can be modified as the cat grows or gaining weight. Created by the world's fastest titanium 3D printing source for prototype and low-volume production parts.</p>
+              <p class="source"><em>Source: </em><a href="https://vetclinika.com/company/personal/gorshkov_sergey_sergeevich.htm" target="_blank">Dr Sergey Gorshkov: Veterinary surgery specialist</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/polyleg.jpg" class="d-block" alt="poly legs">
+            <div class="carousel-caption d-md-block">
+              <h5 class="limb-title">Poly Legs</h5>
+              <p>Modeled after human splints, it provides stability for the kitty. Both sturdy and lightweight, its features are waterproof and easy-to-clean to support. Plus, it’s available in different sizes to accommodate cats all breeds.</p>
+              <p class="source"><em>Source: </em><a href="https://vetclinika.com/company/personal/gorshkov_sergey_sergeevich.htm" target="_blank">Dr Sergey Gorshkov: Veterinary surgery specialist</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/wheelchair.jpg" class="d-block" alt="cat wheelchair">
+            <div class="carousel-caption d-md-block">
+              <h5 class="limb-title">Wheelchairs</h5>
+              <p>Wheelchair is easy to install, fully adjustable and portable due to high-quality aircraft grade frame to provide maximum and optimal comfort & mobility to let pet enjoy walking and running with it. Good for older, injured or disabled cats, this pet wheelchairs allow them to move again, exercise, play happier, and live a healthy life.</p>
+              <p class="source"><em>Source: </em><a href="https://www.youtube.com/watch?v=I8-sP4iTUQc" target="_blank">Pet Orthopedics</a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control carousel-control-prev" type="button" data-bs-target="#monCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control carousel-control-next" type="button" data-bs-target="#monCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Future Cat Newsletter!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <!--label for="recipient-name" class="col-form-label">Name:</label-->
+                <input type="text" class="form-control" id="recipient-name" placeholder="Name">
+              </div>
+              <div class="mb-3">
+                <!--label for="email" class="col-form-label">Email:</label-->
+                <input type="text" name="email" class="form-control" id="email" placeholder="Email">
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                Opt in to investor's newsletter
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-bs-dismiss="modal">Close</button>
+            <button type="button" onclick="newsAlert()">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--script+popup-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha512-AFwxAkWdvxRd9qhYYp1qbeRZj6/iTNmJ2GFwcxsMOzwwTaRwz2a/2TX225Ebcj3whXte1WGQb38cXE5j7ZQw3g==" crossorigin="anonymous"></script>
+    <script src="script.js" ></script>
+  </body>
+</html>
