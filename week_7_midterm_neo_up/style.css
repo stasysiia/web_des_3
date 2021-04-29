@@ -243,6 +243,12 @@
          right: 71px;
     }
 }
+@media (min-width:992px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        margin-top: 2% !important;
+
+   }
+}
  @media (max-width:600px) {
      .card-title {
          font-size: 1.8em;
