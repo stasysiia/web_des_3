@@ -52,10 +52,12 @@ body {
 }
 
 /* pusheen */
-#pusheen {
+#pwrap {
   position: absolute;
   left: 50%;
   top: 50%;
+}
+#pusheen {
   background: #bfbab3;
   width: 300px;
   height: 188px;
@@ -371,7 +373,26 @@ body {
   .dust .particle {
     top: 65% !important;
   }  
-  #pusheen{
-    transform: scale(1.2);
+}
+@media screen and (max-width:769px) {
+  #pwrap{
+    transform: scale(.6);
+    position: absolute;
+    left: unset;
+    top: unset;
   }
+  .dust .particle {
+    top: 43% !important;
+  } 
+}
+@media screen and (max-width:480px) {
+  #pwrap{
+    transform: scale(.4);
+    position: absolute;
+    left: unset;
+    top: unset;
+  }
+  .dust .particle {
+    top: 43% !important;
+  } 
 }
