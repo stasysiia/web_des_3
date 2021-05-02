@@ -239,7 +239,7 @@ body {
   border-radius: 50%;
   position: absolute;
   border: none;
-  top: 70%;
+  top: 57%;
   left: 50%;
   opacity: 0;
 }
@@ -366,4 +366,10 @@ body {
 
 .dust.back .particle:nth-child(6) {
           animation-delay: calc((4.8s * 0.68) + 0.06s);
+}
+
+@media screen and (max-height:600px) {
+  .dust .particle {
+    top: 65% !important;
+  }  
 }
