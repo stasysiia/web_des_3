@@ -64,7 +64,6 @@ body {
   border-radius: 90px;
   animation: boxAnime 4s cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-fill-mode: forwards;
-  mix-blend-mode: hard-light;
 }
 #pusheen:before, #pusheen:after {
   content: "";
