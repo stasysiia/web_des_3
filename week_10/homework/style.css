@@ -371,4 +371,7 @@ body {
   .dust .particle {
     top: 65% !important;
   }  
+  #pusheen{
+    transform: scale(1.2);
+  }
 }
