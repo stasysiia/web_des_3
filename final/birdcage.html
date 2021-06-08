@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stasysiia's Store</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .back {position: relative;top: -30px;font-size: 16px;margin: 10px 10px 3px 15px}
+      #product {
+      max-width: 1440px;
+      padding-top: 60px;
+      margin: auto;
+      }
+      .art-title {font-size: 2em}
+      #product-form, h6 {color: slategrey;margin: .6em 0;}
+      h6 {font-size: 1.4em}
+      .details {font-size: 18px;line-height: 1.4em}
+      .form-check-input:checked[type=radio] {
+      filter: brightness(0.87);
+      background: slategrey;
+      background-size: 100%;
+      border-color: transparent;
+      }
+      .form-check .form-check-input {
+      float: unset;
+      margin-left: -.5em;
+      border-radius: 4px;
+      }
+      .form-control:focus {
+      border-color: slategrey;
+      }
+      .related {margin: 70px 6px;font-size: 1.5em}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a id="logo" class="navbar-brand logo" href="index.html">Stasysiia</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="shop.html">Shop</a>
+              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="about.html">About</a>
+            </div>
+          </div>
+        </div>
+        <div id="navbarSupportedContent">
+          <ul class="socials">
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+            <li id="mycart">
+              <a href="cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
+                  <circle 
+                    cx="23.9" cy="56.3" r="4"></circle>
+                  <circle cx="49.9" cy="56.3" r="4"></circle>
+                  <path d="M23.4 48.3h31l7.7-24H19.7L15.9 7.8A2 2 0 0 0 14 6.3H3.9a2 2 0 0 0 0 4h8.4l9 38z"></path>
+                  <path d="M21.9 20.3H38l.1-.2-8-8-8.2 8.2zm28-8l2.2-5.6-7.4-3-6.6 16.4.1.2h8.4l1.5-3.7v3.7h12v-8H49.9z"></path>
+                </svg>
+                <span id="cartItems">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main id="product">
+      <div class="back"><a href="shop.html">&#11178; shop</a></div>
+      <div class="container">
+        <div class="row mb-3">
+          <!--product images-->
+          <div class="col-12 col-md-6 pb-3 pr-4">
+            <div id="productCarousel" class="carousel slide" data-ride="carousel">
+              <!--controls-->
+              <ol class="carousel-indicators">
+                <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#productCarousel" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/birdcage.jpg" class="d-block w-100" alt="dark art 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/birdcage-posters.jpg" class="d-block w-100" alt="dark art 1">
+                </div>
+              </div>
+              <a class="carousel-control-next" href="#productCarousel" type="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+          <!--product details-->
+          <div class="col-12 col-md-6 pl-4">
+            <h3 class="art-title pb-3">Birdcage</h3>
+            <form id="product-form">
+              <h6 class="price" id="price"></h6>
+              <!--Size and Quanitity-->
+              <div class="row productOptions">
+                <div class="col-6">
+                  <label for="selectSize">Size</label>
+                  <select class="form-control w-50" id="selectSize">
+                    <option value="25">8"x11"</option>
+                    <option value="30">14"x20"</option>
+                    <option value="36">20"x24"</option>
+                    <option value="42">26"x30"</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label for="selectQuantity">Quantity</label>
+                  <select class="form-control w-50" id="selectQuantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <h6>Framing Options</h6>
+              <hr>
+              <!--Framing and Border-->
+              <div class="productOptions">
+                <fieldset class="form-group">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="frameRadio"
+                          id="unframed" value="framed2" onchange="frameCharge()" checked>
+                        <label class="form-check-label" for="frameRadio2">
+                        Unframed Print
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="frameRadio"
+                          id="framed" value="framed1" onchange="frameCharge()">
+                        <label class="form-check-label" for="frameRadio1">
+                        Handcrafted Wood Frame
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button type="button" class="btn contact p-2 mb-4 " id="addCart"><span>Add to Cart</span></button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 pr-4">
+            <h6>From the Artist</h6>
+            <p>This Official Stasysiia (ex. by_yb) Art Print offers stunning gallery quality color accuracy and vividness available in your choice of 5 sizes, framed or unframed.</p>
+          </div>
+          <div class="col-12 col-sm-6">
+            <h6>Details</h6>
+            <ul class="details">
+              <li>190 GSM 100% Cotton Rag Natural Fine Art Paper</li>
+              <li>Printed Using Epson UltraChrome Pro Inks for Superior Color Performance, Optical Clarity, and Color Permanence</li>
+              <li>Custom Trimmed With Border For Framing (Designed to Fit Standard Size Frames)</li>
+              <li>Available Custom Framed in a Bright White Mat and Your Choice of Black or White Frame Designed by Stasysiia</li>
+              <li>Ships Worldwide via UPS Expedited</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subsection container mb-5">
+        <h3 class="related text-center mb-3">You May Also Like</h3>
+        <div class="row">
+          <!--PRODUCT THUMB-->
+          <div class="col-12 col-sm-4 text-center mb-5 product-thumb">
+            <a href="stranger.html">
+              <div>
+                <img class="img-thumbnail mb-3" src="img/demon2.jpg" alt="dark art">
+                <h5 class="mb-1">Stranger</h5>
+                <h6 class="text-muted">$25 to $45</h6>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-4 text-center mb-5 product-thumb">
+            <a href="skull.html">
+              <div>
+                <img class="img-thumbnail mb-3" src="img/skull.jpg" alt="dark art">
+                <h5 class="mb-1">Skull</h5>
+                <h6 class="text-muted">$25 to $45</h6>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-4 text-center mb-5 product-thumb">
+            <a href="birdcage.html">
+              <div>
+                <img class="img-thumbnail mb-3" src="img/birdcage.jpg" alt="weird art">
+                <h5 class="mb-1">Birdcage</h5>
+                <h6 class="text-muted">$25 to $45</h6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-center text-md-left mt-md-1">
+          <p class="inline"><a class="navbar-brand logo" href="index.html">Stasysiia.com</a></p>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-left mt-2 mt-md-1">
+          <h3>Questions?</h3>
+          <a class="text-dark questions" href="faq.html">FAQ</a>
+          <button type="button" onclick="show()">Contact</button>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-3 mt-md-1">
+          <h3>Follow Me</h3>
+          <ul class="socials">
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Contact Us</h5>
+            <button type="button" class="btn-close" onclick="hide()"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Name" required>
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+              <div class="mb-0">
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Email" required>
+                  <div class="invalid-feedback">
+                    Please enter your email.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Subject" required>
+                <div class="invalid-feedback">
+                  Please provide the subject.
+                </div>
+              </div>
+              <div class="mb-0">
+                <textarea rows="5" type="text" class="form-control" name="message" class="form-control" id="message" placeholder="Say Something.." required></textarea>
+                <div class="invalid-feedback">
+                  Please type your message.
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      var size = document.getElementById("selectSize");
+      var quantity = document.getElementById("selectQuantity")
+      var price = document.getElementById("price");
+      price.innerHTML = "$" + size.value;
+      size.onchange = function () {
+          price.innerHTML = "$" + (size.value * quantity.value);
+      }
+      quantity.onchange = function () {
+          price.innerHTML = "$" + (size.value * quantity.value);
+      }
+      
+      var addItem = document.getElementById('addCart');
+      var items = document.getElementById('cartItems');
+      var count = parseInt(items.innerHTML);
+      addItem.addEventListener("click", function (event) {
+          count = parseInt(items.innerHTML);
+          items.innerHTML = count + parseInt(quantity.value);
+      });
+      
+      function frameCharge() {
+          fCharge = 3;
+          if (document.getElementById('framed').checked == true) {
+              price.innerHTML = "$" + parseInt(size.value * quantity.value + fCharge);
+              console.log('framed');
+          } else {
+              price.innerHTML = "$" + parseInt(size.value * quantity.value);
+          }
+      }
+      frameCharge();
+    </script>
+  </body>
+</html>

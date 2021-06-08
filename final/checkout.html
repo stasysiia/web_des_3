@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stasysiia's Store</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      #checkout {
+      max-width: 1440px;
+      padding-top: 60px;
+      margin: auto;
+      }
+      fieldset {margin-top:0px}
+      input.monmon {padding:11px}
+      label.monmon {padding:0px 0px 6px 8px}
+      .monmon {margin-top: 20px}
+      /* hiding the billing section if checkbox is checked */
+      input[type="checkbox"]:checked ~ fieldset {
+      display: none;
+      }
+      .cartItem {--bs-gutter-x: 1.5rem;}
+      .cartItemQuantity, .proceed {
+      background: #f4f4f4;
+      }
+      .items {padding-right: 30px}
+      #btn-checkout {min-width: 100%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a id="logo" class="navbar-brand logo" href="index.html">Stasysiia</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="shop.html">Shop</a>
+              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="about.html">About</a>
+            </div>
+          </div>
+        </div>
+        <div id="navbarSupportedContent">
+          <ul class="socials">
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+            <li id="mycart">
+              <a href="cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
+                  <circle 
+                    cx="23.9" cy="56.3" r="4"></circle>
+                  <circle cx="49.9" cy="56.3" r="4"></circle>
+                  <path d="M23.4 48.3h31l7.7-24H19.7L15.9 7.8A2 2 0 0 0 14 6.3H3.9a2 2 0 0 0 0 4h8.4l9 38z"></path>
+                  <path d="M21.9 20.3H38l.1-.2-8-8-8.2 8.2zm28-8l2.2-5.6-7.4-3-6.6 16.4.1.2h8.4l1.5-3.7v3.7h12v-8H49.9z"></path>
+                </svg>
+                <span id="cartItems">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main id="checkout">
+      <div class="back"><a href="cart.html">&#11178; cart</a></div>
+      <h1>Checkout</h1>
+      <div class="container-fluid">
+        <form id="address-form" class="needs-validation form-floating" novalidate>
+          <div class="row align-items-start">
+            <div class="col-12 col-sm-8 items">
+              <fieldset>
+                <h4 class="mb-3">Personal Information</h4>
+                <div>
+                  <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+                  <input type="email" class="form-control" id="email" placeholder="igor@boosboos.com" required>
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+                <div>
+                  <label for="phone" class="form-label">Phone Number <span class="text-muted"></span></label>
+                  <input type="phone" class="form-control" id="email" placeholder="555-555-5555" required>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </fieldset>
+              <!-- BILL ADDRESS -->
+              <fieldset>
+                <h4 class="mb-3">Billing address</h4>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+                  <div>
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                    <div class="invalid-feedback">
+                      Please enter your billing address.
+                    </div>
+                  </div>
+                  <div>
+                    <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>California</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <!-- SHIP ADDRESS -->
+              <input type="checkbox" class="monmon form-check-input" name="" id="same-address">
+              <label class="monmon form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+              <fieldset>
+                <hr class="my-4"/>
+                <h4 class="mb-3">Shipping address</h4>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="address" class="form-label">Address 1</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>California</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <hr class="my-4">
+              <h4 class="mb-3">Payment</h4>
+              <div class="my-3">
+                <div class="form-check">
+                  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                  <label class="form-check-label" for="credit">Credit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                  <label class="form-check-label" for="debit">Debit card</label>
+                </div>
+              </div>
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Name on card</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <small class="text-muted">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label">Credit card number</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="0000-0000-0000-0000" required>
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">Expiration</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required>
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="123" required>
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="col-12 col-sm-4 p-3 proceed">
+              <div class="row m-0">
+                <div class="col-sm-8 p-0 ">
+                  <h6>Subtotal</h6>
+                </div>
+                <div class="col-sm-4 p-0">
+                  <p id="subtotal">$64.00</p>
+                </div>
+              </div>
+              <div class="row m-0">
+                <div class="col-sm-8 p-0 ">
+                  <h6>Tax</h6>
+                </div>
+                <div class="col-sm-4 p-0">
+                  <p id="tax">$6.40</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row mx-0 mb-2">
+                <div class="col-sm-8 p-0 d-inline">
+                  <h5>Total</h5>
+                </div>
+                <div class="col-sm-4 p-0">
+                  <p id="total">$70.40</p>
+                </div>
+              </div>
+              <button href="checkout.html" id="btn-checkout" class="shopnow" type="submit"><span>Buy It!</span></button>
+            </div>
+          </div>
+      </div>
+      </form>
+      </div>
+    </main>
+    <footer class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-md-left mt-md-1">
+          <p class="inline"><a class="navbar-brand logo" href="index.html">Stasysiia.com</a></p>
+          <!--p class="copyright inline">© Copyright 2021</p-->
+        </div>
+        <div class="col-12 col-md-4 text-md-left mt-2 mt-md-1">
+          <h3>Questions?</h3>
+          <a class="text-dark questions" href="faq.html">FAQ</a>
+          <button type="button" onclick="show()">Contact</button>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-left mb-3 mt-md-1">
+          <h3>Follow Me</h3>
+          <ul class="socials">
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Contact Us</h5>
+            <button type="button" class="btn-close" onclick="hide()"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Name" required>
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+              <div class="mb-0">
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Email" required>
+                  <div class="invalid-feedback">
+                    Please enter your email.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Subject" required>
+                <div class="invalid-feedback">
+                  Please provide the subject.
+                </div>
+              </div>
+              <div class="mb-0">
+                <textarea rows="5" type="text" class="form-control" name="message" class="form-control" id="message" placeholder="Say Something.." required></textarea>
+                <div class="invalid-feedback">
+                  Please type your message.
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      var inputs = document.querySelectorAll('input[type="text"]');
+      var form = document.getElementById('address-form');
+      function labelUp(input) {
+        var _this = input;
+        if (_this.classList.contains('open')) {
+          return;
+        }
+        _this.classList.add('open');
+      }
+      function labelDown(input) {
+        var _this = input;
+        if (_this.classList.contains('open') && !_this.value) {
+          _this.classList.remove('open');
+        }
+      }
+      form.addEventListener('input', function(e) {
+        if (e.target.tagName === "INPUT") {
+          labelUp(e.target);
+        }
+      }, false);
+      for (var i = 0, l = inputs.length; i < l; i++) {
+        inputs[i].addEventListener('blur', function(e) {
+            labelDown(e.target);
+        }, false);
+      }
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict'
+      
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+      
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+      
+              form.classList.add('was-validated')
+            }, false)
+          })
+      })()
+    </script>
+  </body>
+</html>

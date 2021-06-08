@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stasysiia's Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .accordion-button:not(.collapsed) {
+      color: slategrey;
+      background-color: #f7f9fc;
+      box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+      }
+      .accordion-button:focus {
+      border: none !important;
+      box-shadow: none !important;
+      }
+    </style>
+  </head>
+  <body id="faq">
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a id="logo" class="navbar-brand logo" href="index.html">Stasysiia</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="shop.html">Shop</a>
+              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="about.html">About</a>
+            </div>
+          </div>
+        </div>
+        <div id="navbarSupportedContent">
+          <ul class="socials">
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+            <li id="mycart">
+              <a href="cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
+                  <circle 
+                    cx="23.9" cy="56.3" r="4"></circle>
+                  <circle cx="49.9" cy="56.3" r="4"></circle>
+                  <path d="M23.4 48.3h31l7.7-24H19.7L15.9 7.8A2 2 0 0 0 14 6.3H3.9a2 2 0 0 0 0 4h8.4l9 38z"></path>
+                  <path d="M21.9 20.3H38l.1-.2-8-8-8.2 8.2zm28-8l2.2-5.6-7.4-3-6.6 16.4.1.2h8.4l1.5-3.7v3.7h12v-8H49.9z"></path>
+                </svg>
+                <span id="cartItems">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>FAQ</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="accordion accordion-flush" id="accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
+                How long do orders take to ship?
+                </button>
+              </h2>
+              <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordion">
+                <div class="accordion-body">Most orders ship in 1-2 business days. Please note during periods of high volume, or special promotions that require hand signing of orders, please allow extra processing time of 1-3 weeks.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
+                Do orders have tracking?
+                </button>
+              </h2>
+              <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordion">
+                <div class="accordion-body">Yes, all orders are shipped UPS with full tracking, you will receive tracking by email (or SMS if you selected that option during checkout) as soon as your order is on the way.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+                Will I have to pay any duty or additional taxes when I receive my order?
+                </button>
+              </h2>
+              <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#accordion">
+                <div class="accordion-body">If you are located outside of the United States or Canada, your order may be subject to import duties, taxes, or other charges which are not included in the total cost of your order. Please see our Shipping Policies for more information.</div>
+              </div>
+            </div>
+            <!--more FAQ copypasted from above</p-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                Are prints signed by Anastasiia?
+                </button>
+              </h2>
+              <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordion">
+                <div class="accordion-body">First Edition prints and Original Paintings are signed by Anastasiia. Open Edition Prints have a printed signature.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                What happens if my order is damaged?
+                </button>
+              </h2>
+              <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordion">
+                <div class="accordion-body">If your order arrives damaged please take photos of the items and packaging and contact us.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                Do you warranty your products?
+                </button>
+              </h2>
+              <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordion">
+                <div class="accordion-body">We stand by the quality of our products, if you have any issues with your Stasysiia art please contact us for replacement or repair.</div>
+              </div>
+            </div>
+            <!--more FAQ copypasted from above</p-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                How do I cancel an order?
+                </button>
+              </h2>
+              <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordion">
+                <div class="accordion-body">If you wish to cancel or modify an order please contact us immediately. Once your order is in production we are unable to make changes.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+                Can I get permission to tattoo your artwork?
+                </button>
+              </h2>
+              <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordion">
+                <div class="accordion-body">Yes, no need to request permission, please send us a photo when it’s done or post it with #by_yb #stasysiia.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                What if I have questions that aren’t answered here?
+                </button>
+              </h2>
+              <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordion">
+                <div class="accordion-body">Please contact us with any additional questions. If you are contacting us about an order, please include the order number.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="text-muted">Stasysiia Studio - Century City</h4>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.4239630489483!2d-118.41522618478484!3d34.058644580604216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bbf2547431df%3A0x2a99113102989340!2sCentury%20Plaza%20Towers%2C%202049%20Century%20Park%20E%20%232525%2C%20Los%20Angeles%2C%20CA%2090067!5e0!3m2!1sen!2sus!4v1623117206722!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </main>
+    <footer class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-md-left mt-md-1">
+          <p class="inline"><a class="navbar-brand logo" href="index.html">Stasysiia.com</a></p>
+          <!--p class="copyright inline">© Copyright 2021</p-->
+        </div>
+        <div class="col-12 col-md-4 text-md-left mt-2 mt-md-1">
+          <h3>Questions?</h3>
+          <a class="text-dark questions" href="faq.html">FAQ</a>
+          <button type="button" onclick="show()">Contact</button>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-left mb-3 mt-md-1">
+          <h3>Follow Me</h3>
+          <ul class="socials">
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Contact Us</h5>
+            <button type="button" class="btn-close" onclick="hide()"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Name" required>
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+              <div class="mb-0">
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Email" required>
+                  <div class="invalid-feedback">
+                    Please enter your email.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Subject" required>
+                <div class="invalid-feedback">
+                  Please provide the subject.
+                </div>
+              </div>
+              <div class="mb-0">
+                <textarea rows="5" type="text" class="form-control" name="message" class="form-control" id="message" placeholder="Say Something.." required></textarea>
+                <div class="invalid-feedback">
+                  Please type your message.
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

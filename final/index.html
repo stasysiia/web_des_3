@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stasysiia's Portfolio</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a id="logo" class="navbar-brand logo" href="index.html">Stasysiia</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="shop.html">Shop</a>
+              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="about.html">About</a>
+            </div>
+          </div>
+        </div>
+        <div id="navbarSupportedContent">
+          <ul class="socials">
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="no-mobile">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+            <li id="mycart">
+              <a href="cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
+                  <circle 
+                    cx="23.9" cy="56.3" r="4"></circle>
+                  <circle cx="49.9" cy="56.3" r="4"></circle>
+                  <path d="M23.4 48.3h31l7.7-24H19.7L15.9 7.8A2 2 0 0 0 14 6.3H3.9a2 2 0 0 0 0 4h8.4l9 38z"></path>
+                  <path d="M21.9 20.3H38l.1-.2-8-8-8.2 8.2zm28-8l2.2-5.6-7.4-3-6.6 16.4.1.2h8.4l1.5-3.7v3.7h12v-8H49.9z"></path>
+                </svg>
+                <span id="cartItems">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="container hero-carousel">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12">
+          <div id="hcarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#hcarousel" data-slide-to="0" class="active bg-secondary"></li>
+              <li data-target="#hcarousel" data-slide-to="1" class="bg-secondary"></li>
+              <li data-target="#hcarousel" data-slide-to="2" class="bg-secondary"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/1.png" class="d-block w-100" alt="stasysiia art">
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="shopnow homebtn" href="shop.html" role="button"><span>SHOP NOW</span></a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="shop.html"><img src="img/2.png" class="d-block w-100" alt="stasysiia art"></a>
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="shop.html"><img src="img/3.png" class="d-block w-100" alt="stasysiia art"></a>
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="last-section" class="container multi-carousel">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12">
+          <div id="carousel" class="carousel slide ma" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active bg-secondary"></li>
+              <li data-target="#carousel" data-slide-to="1" class="bg-secondary"></li>
+              <li data-target="#carousel" data-slide-to="2" class="bg-secondary"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <h1>New Releases</h1>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/bear.jpg" class="card-img-top" alt="dark art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Mulberry Bear</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/alien.jpg" class="card-img-top" alt="dark art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">RE:d Alien</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/skull2.jpg" class="card-img-top" alt="dark art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Princess</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <h1>Green Cat Series</h1>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/robot.jpg" class="card-img-top" alt="cat art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Green Cat</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/greencat3.jpg" class="card-img-top" alt="cat art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Unity:A</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/greencat2.jpg" class="card-img-top" alt="cat art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Robokitty</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <h1>Best Sellers</h1>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/demon.jpg" class="card-img-top" alt="weird art"></a></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Demon</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/birdcage.jpg" class="card-img-top" alt="weird art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Birdcage</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-4 mb-4">
+                    <div class="card mr-4 ml-4">
+                      <a href="shop.html"><img src="img/skull.jpg" class="card-img-top" alt="weird art"></a>
+                      <div class="card-body">
+                        <h5 class="card-title">Skull</h5>
+                        <p class="card-text">from $25.00</p>
+                        <a href="shop.html" class="btn btn-primary buy-now">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-center text-md-left mt-md-1">
+          <p class="inline"><a class="navbar-brand logo" href="index.html">Stasysiia.com</a></p>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-left mt-2 mt-md-1">
+          <h3>Questions?</h3>
+          <a class="text-dark questions" href="faq.html">FAQ</a>
+          <button type="button" onclick="show()">Contact</button>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-3 mt-md-1">
+          <h3>Follow Me</h3>
+          <ul class="socials">
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24">
+                  <path d="M 8 3 C 5.2 3 3 5.2 3 8 L 3 16 C 3 18.8 5.2 21 8 21 L 16 21 C 18.8 21 21 18.8 21 16 L 21 8 C 21 5.2 18.8 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.7 5 19 6.3 19 8 L 19 16 C 19 17.7 17.7 19 16 19 L 8 19 C 6.3 19 5 17.7 5 16 L 5 8 C 5 6.3 6.3 5 8 5 z M 17 6 C 16.4 6 16 6.4 16 7 C 16 7.6 16.4 8 17 8 C 17.6 8 18 7.6 18 7 C 18 6.4 17.6 6 17 6 z M 12 7 C 9.2 7 7 9.2 7 12 C 7 14.8 9.2 17 12 17 C 14.8 17 17 14.8 17 12 C 17 9.2 14.8 7 12 7 z M 12 9 C 13.7 9 15 10.3 15 12 C 15 13.7 13.7 15 12 15 C 10.3 15 9 13.7 9 12 C 9 10.3 10.3 9 12 9 z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Contact Us</h5>
+            <button type="button" class="btn-close" onclick="hide()"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Name" required>
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+              <div class="mb-0">
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Email" required>
+                  <div class="invalid-feedback">
+                    Please enter your email.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-0">
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Subject" required>
+                <div class="invalid-feedback">
+                  Please provide the subject.
+                </div>
+              </div>
+              <div class="mb-0">
+                <textarea rows="5" type="text" class="form-control" name="message" class="form-control" id="message" placeholder="Say Something.." required></textarea>
+                <div class="invalid-feedback">
+                  Please type your message.
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
