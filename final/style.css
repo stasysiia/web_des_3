@@ -51,6 +51,7 @@
      box-shadow: 2px 2px 2px #c8c8c8, -2px -2px 2px white;
 }
  .modal-dialog {
+     top: 20%;
     overflow-y: hidden;
 }
  .modal-backdrop {
