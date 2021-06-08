@@ -363,13 +363,8 @@
  #cartItems {
     font-size: 17px
 }
-/*#faq {
-     background: url(img/dots-bottom.svg) no-repeat;
-     background-size: auto 420px;
-     background-position-y: -175px;
-     background-position-x: 10px;
-}
-*/
+#product .container .row .pr4 {padding-right: 15px}
+#product .container .row .pl4 {padding-left: 15px} 
  footer {
     margin-bottom: 30px;
     margin-top: 60px
@@ -400,6 +395,9 @@
      #navbarSupportedContent {
          right: 71px;
     }
+}
+ @media (max-width:767px) {
+    #product .container .row .pr4, #product .container .row .pl4 {padding-right: 5px !important;padding-left: 5px !important}
 }
  @media (max-width:600px) {
      .no-mobile {
