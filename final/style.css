@@ -422,6 +422,8 @@
      footer .navbar-brand {
          font-size: 2.2rem;
     }
+    footer div div:nth-child(1), footer div div:nth-child(2) {
+        text-align: center ! important}
 }
  @media (max-width:400px) {
      .card-title {
@@ -431,5 +433,3 @@
          font-size: 1.4em;
     }
 }
-@media (max-width:600px) { 
-    footer div div:nth-child(1), footer div div:nth-child(2) {text-align: center ! important}}
