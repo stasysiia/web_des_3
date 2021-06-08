@@ -92,7 +92,7 @@
 }
  form div:not(.form-check) input, form div textarea {
      border: none;
-     margin: 7px 4px 6px 0px !important;
+     /* margin: 0 !important;*/
      padding: .6em;
      border-radius: none;
      background-color: #fff;
