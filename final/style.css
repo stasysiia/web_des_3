@@ -1,5 +1,5 @@
 /* stasysiia.com */
-@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
  body {
      background-color: #fff;
      font-family: 'Exo', sans-serif;
@@ -10,39 +10,39 @@
      justify-content: center;
      align-items: center;
 }
-a {
-  color: #0e1111;
-  text-decoration: none;
+ a {
+     color: #0e1111;
+     text-decoration: none;
 }
-button {
-    appearance: auto;
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: -internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-    box-sizing: border-box;
-    margin: 0em;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-    border-radius: 4px;
+ button {
+     appearance: auto;
+     -webkit-writing-mode: horizontal-tb !important;
+     text-rendering: auto;
+     color: -internal-light-dark(black, white);
+     letter-spacing: normal;
+     word-spacing: normal;
+     text-transform: none;
+     text-indent: 0px;
+     text-shadow: none;
+     display: inline-block;
+     text-align: center;
+     align-items: flex-start;
+     cursor: default;
+     background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+     box-sizing: border-box;
+     margin: 0em;
+     padding: 1px 6px;
+     border-width: 2px;
+     border-style: outset;
+     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+     border-image: initial;
+     border-radius: 4px;
 }
-.btn-check:focus+.btn-primary, .btn-primary:focus {
-    color: #fff;
-    background-color: #111;
-    border-color: transparent;
-    box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+ .btn-check:focus+.btn-primary, .btn-primary:focus {
+     color: #fff;
+     background-color: #111;
+     border-color: transparent;
+     box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
 }
  button:hover, .btn:hover {
      box-shadow: 5px 5px 7px #c8c8c8, -5px -5px 7px white;
@@ -50,20 +50,22 @@ button {
  button:active {
      box-shadow: 2px 2px 2px #c8c8c8, -2px -2px 2px white;
 }
-.modal-dialog {top: 20%;}
+ .modal-dialog {
+    top: 20%;
+}
  .modal-backdrop {
-    background:rgba(0, 0, 0,.2);
+     background:rgba(0, 0, 0,.2);
 }
  .modal-body {
-    position: relative;
-    flex: 1 1 auto;
-    padding: 0rem 1rem;
+     position: relative;
+     flex: 1 1 auto;
+     padding: 0rem 1rem;
 }
  .modal-title {
-    font-size:1.3em;
+     font-size:1.3em;
 }
  .modal-content {
-     background-color: #f7f7f7  ;
+     background-color: #f7f7f7 ;
      border-radius: none;
      border: 1px white solid !important;
      padding:2px 10px;
@@ -89,18 +91,17 @@ button {
      margin-bottom: .4em;
 }
  form div:not(.form-check) input, form div textarea {
-     border: 1px;
-    margin: 7px 4px 6px 0px !important;
-    padding: .6em;
+     border: none;
+     margin: 7px 4px 6px 0px !important;
+     padding: .6em;
      border-radius: none;
-     background-color: ##E6E6E6;
+     background-color: #fff;
      color: #343333;
-     box-shadow: 4px 4px 4px #e2e2e2 inset, -4px -4px 4px white inset;
+     box-shadow: 2px 2px 2px #e2e2e2 inset, -2px -2px 2px white inset;
      outline: 0;
      font-size: .7em;
      transition: box-shadow 0.2s;
 }
-
  form div:not(.form-check) input:focus, form div textarea:focus {
      box-shadow: 2px 2px 2px #e2e2e2 inset, -2px -2px 2px white inset;
 }
@@ -111,7 +112,7 @@ button {
      padding-left: 0em;
      margin-bottom: 1em;
 }
-.form-check-label {
+ .form-check-label {
      font-size: .8em;
      color: #777 !important;
 }
@@ -121,7 +122,9 @@ button {
      margin-top: .3em;
      padding: 1em 2em;
 }
-.invalid-feedback {font-size: 12px}
+ .invalid-feedback {
+    font-size: 12px
+}
  .social {
      display: flex;
      justify-content: space-between;
@@ -136,14 +139,12 @@ button {
  a:focus, button:focus, input:focus, textarea:focus {
      outline: none;
 }
-
 /*main*/
-main:before {
-  content: "";
-  display: block;
-  height: 88px;
+ main:before {
+     content: "";
+     display: block;
+     height: 88px;
 }
-
  h1 {
      font-size: 2.4em;
      font-weight: 600;
@@ -156,7 +157,9 @@ main:before {
      font-weight: 700;
      font-size: 2.5em;
 }
-h3 {border-bottom: solid 2px #000}
+ h3 {
+    border-bottom: solid 2px #000
+}
  h5{
      padding: 0;
      font-weight: bold;
@@ -167,22 +170,24 @@ h3 {border-bottom: solid 2px #000}
      font-family: "Roboto", sans-serif;
      margin: .6em 0;
 }
-h1, h2, h4 {
-  text-align: center;
-  padding-top: 16px
-  }
-.fr {
-  float: right;
+ h1, h2, h4 {
+     text-align: center;
+     padding-top: 16px 
 }
-.featurette-heading, .lead {
-  padding: 16px;
+ .fr {
+     float: right;
 }
-.row , .container:not(footer) {
+ .featurette-heading, .lead {
+     padding: 16px;
+}
+ .row , .container:not(footer) {
      background: transparent;
 }
-.container {max-width: 100%}
+ .container {
+    max-width: 100%
+}
  .nav-link.active {
-    text-decoration: underline
+     text-decoration: underline 
 }
  .navbar {
      background-color: #fff;
@@ -197,7 +202,9 @@ h1, h2, h4 {
  .nav-link {
      margin-right: 10px;
 }
-.nav-link.active {text-decoration: underline;}
+ .nav-link.active {
+    text-decoration: underline;
+}
  #navbarSupportedContent {
      position: absolute;
      right: 0%;
@@ -206,7 +213,7 @@ h1, h2, h4 {
      padding-top:180px;
 }
  .source {
-    font-size: .8em;
+     font-size: .8em;
 }
  .row {
      --bs-gutter-x: 0rem;
@@ -220,119 +227,160 @@ h1, h2, h4 {
      display: inline-block;
      margin-right: 1.8rem;
 }
-
 /* yukito bloody */
-    .back {position: relative;top: -30px;font-size: 16px;margin: 10px 10px 3px 15px}
-.inline {display: inline-block;}
-.logo {
-  float: left;
-  margin: 6px;
-  transition: all 1s ease; 
-  color: #000;
+ .back {
+    position: relative;
+    top: -30px;
+    font-size: 16px;
+    margin: 10px 10px 3px 15px
 }
-#logo:hover, .logo:hover, .nav-link, a, a:hover {color: #c41505;}
-.btn {
-  background-color: #000;
-  border-radius: none;
-  border: none;
+ .inline {
+    display: inline-block;
 }
-.btn:hover {
-  background-color: #000;
+ .logo {
+     float: left;
+     margin: 6px;
+     transition: all 1s ease;
+     color: #000;
 }
-.btn:hover:not(.buy-now) {
-  color: #d3dce5;
+ #logo:hover, .logo:hover, .nav-link, a, a:hover {
+    color: #c41505;
 }
-.shopnow, .contact {
-  background-color: #000;
-  padding: 10px 20px;
-  font-size: 30px;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing:1px;
-  transition: all 0.5s;
-  cursor: pointer;
+ .btn {
+     background-color: #000;
+     border-radius: none;
+     border: none;
 }
-
-.homebtn {
-  position: relative;
-  top: -100px;
-  right: -28%;
+ .btn:hover {
+     background-color: #000;
 }
-
-.shopnow:hover {
-  text-decoration: none;
-  color: white;
-  background-color: #c41505;
+ .btn:hover:not(.buy-now) {
+     color: #d3dce5;
 }
-
+ .shopnow, .contact {
+     background-color: #000;
+     padding: 10px 20px;
+     font-size: 30px;
+     color: white;
+     text-transform: uppercase;
+     letter-spacing:1px;
+     transition: all 0.5s;
+     cursor: pointer;
+}
+ .homebtn {
+     position: relative;
+     top: -100px;
+     right: -28%;
+}
+ .shopnow:hover {
+     text-decoration: none;
+     color: white;
+     background-color: #c41505;
+}
 /* for button animation*/
-.shopnow span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: all 0.5s;
+ .shopnow span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: all 0.5s;
 }
-
-.shopnow span:after {
-  content: url(img/caticon.png);
-  position: absolute;
-  font-size: 30px;
-  opacity: 0;
-  top: 2px;
-  right: -6px;
-  transition: all 0.5s;
+ .shopnow span:after {
+     content: url(img/caticon.png);
+     position: absolute;
+     font-size: 30px;
+     opacity: 0;
+     top: 2px;
+     right: -6px;
+     transition: all 0.5s;
 }
-
-.shopnow:hover span {
-  padding-right: 25px;
+ .shopnow:hover span {
+     padding-right: 25px;
 }
-
-.shopnow:hover span:after {
-  opacity: 1;
-  top: 2px;
-  right: -6px;
+ .shopnow:hover span:after {
+     opacity: 1;
+     top: 2px;
+     right: -6px;
 }
-
-.socials li a svg {fill: #000;transition: all 1s ease-in}
-.socials li a:hover svg {fill: #c41505}
-
-.multi-carousel {margin-top: 84px;}
-.hero-carousel {padding: 0;margin: 84px 0 0 0;width: 100% !important; max-width: 100% !important;}
-
-.carousel-indicators li {position: relative;width: 21px;height: 21px;    border-radius: 50%;margin: 8px;opacity: .6}
-
-.hero-carousel .carousel-indicators{max-height: 35px}
-.multi-carousel .carousel-indicators{max-height: 20px}
-.multi-carousel .carousel-indicators li {top: 35px}
-
-#carousel {max-width: 1440px}
-#hcarousel .carousel-inner {height: auto}
-#hcarousel ol .bg-secondary {
-    background-color: #fff!important;
+ .socials li a svg {
+    fill: #000;
+    transition: all 1s ease-in
 }
-.ma {margin: auto}
-.card {border: none}
-.card-body {
-    flex: 1 1 auto;
-    padding: 1rem 0rem;
+ .socials li a:hover svg {
+    fill: #c41505
 }
-.price {color: slategrey;font-size:2em}
-#mycart {min-width: 90px}   
-#cartItems {font-size: 17px}
-
+ .multi-carousel {
+    margin-top: 84px;
+}
+ .hero-carousel {
+    padding: 0;
+    margin: 84px 0 0 0;
+    width: 100% !important;
+     max-width: 100% !important;
+}
+ .carousel-indicators li {
+    position: relative;
+    width: 21px;
+    height: 21px;
+     border-radius: 50%;
+    margin: 8px;
+    opacity: .6
+}
+ .hero-carousel .carousel-indicators{
+    max-height: 35px
+}
+ .multi-carousel .carousel-indicators{
+    max-height: 20px
+}
+ .multi-carousel .carousel-indicators li {
+    top: 35px
+}
+ #carousel {
+    max-width: 1440px
+}
+ #hcarousel .carousel-inner {
+    height: auto
+}
+ #hcarousel ol .bg-secondary {
+     background-color: #fff!important;
+}
+ .ma {
+    margin: auto
+}
+ .card {
+    border: none
+}
+ .card-body {
+     flex: 1 1 auto;
+     padding: 1rem 0rem;
+}
+ .price {
+    color: slategrey;
+    font-size:2em
+}
+ #mycart {
+    min-width: 90px
+}
+ #cartItems {
+    font-size: 17px
+}
 /*#faq {
-    background: url(img/dots-bottom.svg) no-repeat;
-    background-size: auto 420px;
-    background-position-y: -175px;
-    background-position-x: 10px;
-}*/
-
-footer {margin-bottom: 30px;margin-top: 60px}
-footer p {margin: .33em}
-footer h3 {margin: 50px 0 20px 0}
-
+     background: url(img/dots-bottom.svg) no-repeat;
+     background-size: auto 420px;
+     background-position-y: -175px;
+     background-position-x: 10px;
+}
+*/
+ footer {
+    margin-bottom: 30px;
+    margin-top: 60px
+}
+ footer p {
+    margin: .33em
+}
+ footer h3 {
+    margin: 50px 0 20px 0
+}
 /* cat */
-
  @media (min-width:601px) and (max-width:1100px) {
      .card-title {
          font-size: 1.7em;
@@ -354,10 +402,12 @@ footer h3 {margin: 50px 0 20px 0}
     }
 }
  @media (max-width:600px) {
-  .no-mobile {display: none !important}
-  .form-control {
-    font-size: .9rem !important;
-}
+     .no-mobile {
+        display: none !important
+    }
+     .form-control {
+         font-size: .9rem !important;
+    }
      .card-title {
          font-size: 1.8em;
     }
@@ -369,7 +419,7 @@ footer h3 {margin: 50px 0 20px 0}
          padding:5px !important;
          border-radius: 20px !important;
     }
-    footer .navbar-brand {
+     footer .navbar-brand {
          font-size: 2.2rem;
     }
 }
