@@ -1,6 +1,6 @@
 function nasarequested(){
    const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
-   const apiKey = "3Re0P0dULxOpg4EW0hzmIQaGVopmKb1BchFEvHMs";
+   const apiKey = '3Re0P0dULxOpg4EW0hzmIQaGVopmKb1BchFEvHMs';
    const dateInput = document.querySelector("#datepicker");
    const title = document.querySelector("#title");
    const copyright = document.querySelector("#copyright");
@@ -60,7 +60,7 @@ function nasarequested(){
     information.innerHTML=data.explanation
    }
    fetchData();
-   
+
    const dateInput = document.querySelector("#datepicker");
     dateInput.addEventListener('change',(e)=>{
      e.preventDefault();
