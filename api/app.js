@@ -60,4 +60,10 @@ function nasarequested(){
     information.innerHTML=data.explanation
    }
    fetchData();
+   
+   const dateInput = document.querySelector("#datepicker");
+    dateInput.addEventListener('change',(e)=>{
+     e.preventDefault();
+     nasarequested();
+    })
 }
