@@ -5,33 +5,14 @@
         <title>Nasa</title>
         <link rel="stylesheet" href="style.css">
  </head>
-    <body>
-     <main>
-     <header>
-     <h1>Nasa's Astronomical Picture of the Day</h1>
-
-     <form >
-     <label for="datepiceker">Pick a date:
-     <input id="datepicker" type="date" min="" max="" > 
-     </label>
-     </form>
-
-     <hr style="color: white; width: 60vw;">
-     </header>
-
-     <section class="title-section">
-     <h2 id="title"></h2>
-     <p id="date"></p>
-     <small style="display: block;" id="copyright" ></small>
-     </section>
-
-     <section id="media-section">
-     </section>
-
-    <div class="description-div">
-     <p id="description"></p>
-    </div>
-     <script src="app.js"></script> 
-
- </body>
-</html>
+ <body>
+       <main>
+          <h1>Nasa's Astronomical Picture of the Day</h1>
+          <input type="date" id="dateFromUser">
+          <button id="getPicBtn">Get NASA pic of the Day</button>
+          <h4><span id="mainDate"></span> — <span id="mainHeader"></span></h4>
+          <img src="" alt="" id="mainPic" width="600">
+          <p id="mainText"></p>
+       </main>
+    </body>
+    </html>

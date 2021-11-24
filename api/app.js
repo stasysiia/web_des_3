@@ -1,64 +1,22 @@
-function nasarequested(){
-   const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
-   const apiKey = '3Re0P0dULxOpg4EW0hzmIQaGVopmKb1BchFEvHMs';
-   const dateInput = document.querySelector("#datepicker");
-   const title = document.querySelector("#title");
-   const copyright = document.querySelector("#copyright");
-   const mediaSection = document.querySelector("#media-section");
-   const information = document.querySelector("#description");
-   const currentDate =new Date().toISOString().slice(0, 10);
-   const imageSection =`<a id="hdimg" href="" target="-blank">
-    <div class="image-div">
-    <img id="image_of_the_day" src="" alt="image-by-nasa">
-    </div>
-   </a>`
-   const videoSection=`<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
+const l = (x) => console.log(x);
 
-   let newDate = "&date="+dateInput.value+"&";
+getPicBtn.addEventListener("click", getAPOD);
 
-   function fetchData(){
-    try{
-    fetch(baseUrl+apiKey+newDate)
-    .then(response=> response.json())
-    .then(json=>{
-    console.log(json);
-    diplaydata(json)
-    })
-    }catch(error){
-    console.log(error)
-    }
-    }
+function getAPOD() {
+  let params = dateFromUser ? '&date='+dateFromUser.value : '';
+  let url = `https://api.nasa.gov/planetary/apod?api_key=3Re0P0dULxOpg4EW0hzmIQaGVopmKb1BchFEvHMs${params}`;
+  fetch(url)
+    .then((response) => showAPOD(response))
+    .catch((err) => l(err));
+}
 
-   function diplaydata(data){
-
-    title.innerHTML=data.title;
-
-    if(data.hasOwnProperty("copyright")){
-    copyright.innerHTML=data.copyright;
-    } else{
-    copyright.innerHTML=""
-    } 
-
-    date.innerHTML=data.date;
-    dateInput.max=currentDate;
-    dateInput.min="1995-06-16";
-
-    if(data.media_type=="video"){
-    mediaSection.innerHTML=videoSection;
-    document.getElementById("videoLink").src=data.url;
-
-    }else{
-    mediaSection.innerHTML=imageSection;
-    document.getElementById("hdimg").href=data.hdurl;
-    document.getElementById("image_of_the_day").src=data.url;
-    }
-    information.innerHTML=data.explanation
-   }
-   fetchData();
-
-    dateInput.addEventListener('change',(e)=>{
-     e.preventDefault();
-     nasarequested();
-    })
-    nasarequested().onload;
+function showAPOD(response) {
+  let res = response.json();
+  res.then((json) => {
+    l(json);
+    mainHeader.textContent = json.title;
+    mainDate.textContent = json.date;
+    mainPic.src = json.hdurl;
+    mainText.textContent = json.explanation;
+  });
 }
