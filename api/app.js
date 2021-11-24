@@ -16,14 +16,6 @@ function nasarequested(){
 
    let newDate = "&date="+dateInput.value+"&";
 
-   const Date = props => (
-    <form onSubmit={props.updateDate}>
-      Enter a date (YYYY-MM-DD):
-      <input />
-      <input type="submit" />
-    </form>
-  );
-
    function fetchData(){
     try{
     fetch(baseUrl+apiKey+newDate)
