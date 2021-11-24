@@ -67,3 +67,5 @@ function nasarequested(){
      nasarequested();
     })
 }
+
+nasarequested().onload;
