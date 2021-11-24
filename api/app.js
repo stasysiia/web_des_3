@@ -6,16 +6,12 @@ function nasarequested(){
    const copyright = document.querySelector("#copyright");
    const mediaSection = document.querySelector("#media-section");
    const information = document.querySelector("#description");
-
    const currentDate =new Date().toISOString().slice(0, 10);
-
-
    const imageSection =`<a id="hdimg" href="" target="-blank">
     <div class="image-div">
     <img id="image_of_the_day" src="" alt="image-by-nasa">
     </div>
    </a>`
-
    const videoSection=`<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
 
    let newDate = "&date="+dateInput.value+"&";
@@ -73,6 +69,5 @@ function nasarequested(){
      e.preventDefault();
      nasarequested();
     })
+    nasarequested().onload;
 }
-
-nasarequested().onload;
